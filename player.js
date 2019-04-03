@@ -3,9 +3,14 @@ hitPoints: 100,
 damage: 0,
 level: 1,
 isAlive: true,
+lastDamageTaken: 0,
+
 fight: function(){
-this.hitPoints = this.hitPoints - Math.ceil((Math.random() * 5));
+this.lastDamageTaken = Math.ceil((Math.random() * 5));
+this.hitPoints = this.hitPoints - this.lastDamageTaken;
 console.log(this.hitPoints);
-}
+},
+
+
 
 }
