@@ -11,6 +11,7 @@ const rawDamage = enemy.calculateRawDamage();
 this.lastDamageTaken = rawDamage - this.level;
 this.hitPoints = this.hitPoints - this.lastDamageTaken;
 
+//Send damage to monster/enemy
 enemy.takeDamage(this.calculateRawDamage());
 
 if (this.hitPoints<1){
@@ -18,6 +19,8 @@ if (this.hitPoints<1){
 }
 },
 
+
+// To calculate damage to monster
 calculateRawDamage: function(){
     return Math.ceil((Math.random() * 5));
 },

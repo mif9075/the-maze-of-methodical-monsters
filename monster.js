@@ -4,10 +4,12 @@ const monster = {
     isAlive: true,
     lastDamageTaken: 0,
 
+    //Use to calculate raw damage to player
     calculateRawDamage: function () {
         return (Math.ceil((Math.random() * 5)) + 2);
     },
 
+    //Monster received rawDamage from player
     takeDamage: function (rawDamage) {
         
         this.lastDamageTaken = rawDamage;
