@@ -8,8 +8,7 @@ const monster = {
         return (Math.ceil((Math.random() * 5)) + 2);
     },
 
-    takeDamage: function () {
-        const rawDamage = (Math.ceil((Math.random() * 5)) + 2);
+    takeDamage: function (rawDamage) {
         
         this.lastDamageTaken = rawDamage;
         this.hitPoints = this.hitPoints - this.lastDamageTaken;
