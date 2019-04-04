@@ -19,5 +19,13 @@ const monster = {
             this.isAlive = false;
         }
     },
+
+    //Monster is death; respawn
+    respawn: function () {
+        this.hitPoints = 30;
+        this.damage = 0;
+        this.isAlive = true;
+        this.lastDamageTaken = 0;
+    }
 }
 

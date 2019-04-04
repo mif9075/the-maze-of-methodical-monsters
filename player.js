@@ -6,6 +6,7 @@ isAlive: true,
 lastDamageTaken: 0,
 
 fight: function(enemy){
+//Damage from monster to player
 const rawDamage = enemy.calculateRawDamage();
 
 this.lastDamageTaken = rawDamage - this.level;
@@ -24,5 +25,10 @@ if (this.hitPoints<1){
 calculateRawDamage: function(){
     return Math.ceil((Math.random() * 5));
 },
+
+levelUp: function(){
+    this.level = this.level + 1;
+    this.hitPoints = this.hitPoints + 5;
+}
 
 }
