@@ -11,9 +11,12 @@ const monster = {
 
     //Monster received rawDamage from player
     takeDamage: function (rawDamage) {
-        
+        if (rawDamage > 1){
         this.lastDamageTaken = rawDamage;
         this.hitPoints = this.hitPoints - this.lastDamageTaken;
+        }else {
+        this.lastDamageTaken === 1;
+        }
 
         if (this.hitPoints < 1) {
             this.isAlive = false;

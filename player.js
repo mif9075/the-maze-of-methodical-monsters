@@ -14,9 +14,13 @@ this.lastDamageTaken = rawDamage - this.level;
 this.hitPoints = this.hitPoints - this.lastDamageTaken;
 
 //Send damage to monster/enemy
+if (this.lastDamageTaken > 1) {
 enemy.takeDamage(this.calculateRawDamage());
+} else {
+enemy.lastDamageTaken === 1;
+}
 
-if (this.hitPoints<1){
+if (this.hitPoints < 1){
     this.isAlive = false;
 }
 },
